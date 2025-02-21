@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { login } from '../api/auth';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const user = await login(email, password);
     if (user) {
