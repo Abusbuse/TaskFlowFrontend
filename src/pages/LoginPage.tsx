@@ -6,11 +6,11 @@ const LoginPage = () => {
 
     const navigate = useNavigate();
 
-  useEffect(() => {
-    if (localStorage.getItem("jwt")) {
-      navigate("/"); // Redirige si déjà connecté
-    }
-  }, [navigate]);
+  //   useEffect(() => {
+  //     if (localStorage.getItem("jwt")) {
+  //       navigate("/#"); // Redirige si déjà connecté
+  //     }
+  // }, [navigate]);
 
   return (
     <div>
